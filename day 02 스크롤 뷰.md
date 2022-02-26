@@ -132,8 +132,8 @@ var keyboardDismissMode: UIScrollViewKeyboardDismissMode { get set }
 ### 스크롤 및 드래그
 
 - scrollViewDidScroll(_:) : 콘텐츠뷰를 스크롤할 때 델리게이트에 알림
-optional func scrollViewDidScroll( _scrollView: UIScrollView)
-- scrollViewWillBeginDragging(_:): 스크롤뷰에서 콘첸츠 스크롤을 시작할 지점을 델리게이트에 알림
+optional func scrollViewDidScroll(_ scrollView: UIScrollView)
+- scrollViewWillBeginDragging(_:): 스크롤뷰에서 콘첸트 스크롤을 시작할 지점을 델리게이트에 알림
 optional func scrollViewWillBeginDragging( _scrollView: UIScrollView)
 - scrollViewWillEndDragging(_:withVelocity: targetContentOffset:): 스크롤뷰의 드래그가 끝나기 직전에 델리게이트에 알림
 optional func scrollViewWIllEndDragging(_scrollView: UIScrollView, withVelocity velocity: CGPoint, targetCOntentOffset: UnsafeMutablePointer<CGPoint>)
