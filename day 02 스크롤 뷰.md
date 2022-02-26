@@ -18,7 +18,7 @@ day 02 - 22/02/26
 ### 주요 프로퍼티
 
 - delegate: 스크롤뷰 객체의 델리게이트
-weak var delegate: UIScrollViewDelegate? { get set }
+> weak var delegate: UIScrollViewDelegate? { get set }
 UIScrollViewDelegate 프로토콜에 의해 선언된 메소드 델리게이트가 UIScrollView 클래스의 메시지에 응답
 
 ## 콘텐츠 크기 및 오프셋 관리
