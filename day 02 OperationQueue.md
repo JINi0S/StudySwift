@@ -1,4 +1,4 @@
-*200226 OperationQueue
+day 02 - 22/02/26
 # OperationQueue
 
 # 목표
