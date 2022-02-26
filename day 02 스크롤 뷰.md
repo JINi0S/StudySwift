@@ -151,15 +151,15 @@ optional func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
 ### 확대 및 축소
 
 - viewForZooming(in:) : 스크롤뷰에서 확대 및 축소를 할 때 확대 및 축소를 할 뷰 인스턴스를 요청
-optional func viewForZooming( in scrollView: UIScrollView) -> UIView?
+  optional func viewForZooming( in scrollView: UIScrollView) -> UIView?
 - scrollViewWillBeginZooming(_ : with:) : 스크롤뷰의 콘텐츠 확대가 시작될 때 델리게이트에 알림
-optional func scrollVoewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?)
+  optional func scrollVoewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?)
 - scrollViewDidEndZooming(_ :with:atScale:) : 스크롤뷰의 콘텐츠 확대가 완료될 때 델리게이트에 알림
-optional func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat)
+  optional func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat)
 - scrollViewDidZoom(_ :): 스크롤뷰의 확대 및 축소 배율이 변경될 때 델리게이트에 알림
-optional func scrollViewDidZoom(_ scrollView: UIScrollView)
+  optional func scrollViewDidZoom(_ scrollView: UIScrollView)
 
 ### 스크롤 애니메이션
 
 - scrollViewDidEndScrollingAnimation(_ :): 스크롤뷰의 스크롤 애니메이션이 끝날 때 델리게이트에 알림
-optional func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView)
+  optional func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView)
