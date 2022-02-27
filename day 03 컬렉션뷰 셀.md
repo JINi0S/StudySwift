@@ -10,6 +10,7 @@ day03 - 22/02/27
 - UICollectionViewCell 클래스
 - 컬렉션뷰 셀과 테이블뷰 셀을 비교
 
+
 ## 컬렉션뷰 셀
 
 컬렉션뷰 셀은 냉장고 속에 있는 반찬통으로 생각할 수 있습니다. 컬렉션뷰라는 냉장고가 있고, 냉장고 안에는 실제 반찬(콘텐츠) 을 담고 있는 컬렉션 뷰 셀이라는 반찬통이 있다고 생각할 수 있습니다. 
@@ -24,6 +25,7 @@ day03 - 22/02/27
 - 일반적으로 컬렉션뷰 셀 클래스의 인스턴스는 직접 생성하지 않습니다. 대신 특정 셀의 하위 클래스를 컬렉션뷰 객체에 등록한 후, 컬렉션뷰 셀 클래스의 새로운 인스턴스가 필요할 때, 컬렉션의 dequeueReusableCell(withReuseIdentifier:for:) 메서드를 호출합니다.
 
 (스토리보드를 사용하여 셀을 구성하면 컬렉션뷰에 따로 셀클래스를 등록할 필요는 없습니다.)
+
 
 ## UICollectionViewCell 클래스
 
@@ -42,7 +44,8 @@ day03 - 22/02/27
 
 - func dragStateDidChange(_ :) : 셀의 드래그 상태가 변경되면 호출됩니다.
 
-드래그 상태는 UICollectionViewCellDragState의 열거형으로 표현되고 none, lifting, dragging의 3가지 상태를 갖습니다
+드래그 상태는 UICollectionViewCellDragState의 열거형으로 표현되고 none, lifting, dragging의 3가지 상태를 갖습니다.
+
 
 ## 컬렉션뷰 셀 vs 테이블뷰 셀
 
