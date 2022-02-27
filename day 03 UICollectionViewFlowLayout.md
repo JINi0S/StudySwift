@@ -12,7 +12,7 @@ UICollectionViewFlowLayout
 - 플로우 레이아웃의 셀 크기와 셀 및 행의 간격 지정 방법
 - UICollectionViewDelegateFlowLayout의 주요 선택 메서드
 
-## UICollctionViewFLowLayout
+## UICollectionViewFLowLayout
 
 UICollctionViewFlowLayout 클래스를 사용하면 컬렉션뷰의 셀을 원하는 형태로 정렬할 수 있습니다. 
 
