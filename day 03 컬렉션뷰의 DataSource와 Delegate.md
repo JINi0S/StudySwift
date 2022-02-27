@@ -98,3 +98,7 @@ optional func collectionView(_ collectionView: UICollectionView, didHighlightIte
 ```
 
 - collectionView(_ : didUnhighlightItemAt:) : 지정된 셀이 강조가 해제될 때 알려주는 메서드
+
+```swift
+optional func collectionView(_ collectionView: UICollectionView, didUnhightlightItemAt indexPath: IndexPath)
+```
