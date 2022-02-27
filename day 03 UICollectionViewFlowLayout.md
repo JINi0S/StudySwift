@@ -12,7 +12,7 @@ UICollectionViewFlowLayout
 - 플로우 레이아웃의 셀 크기와 셀 및 행의 간격 지정 방법
 - UICollectionViewDelegateFlowLayout의 주요 선택 메서드
 
-## UICollectionViewFLowLayout
+## UICollectionViewFlowLayout
 
 UICollctionViewFlowLayout 클래스를 사용하면 컬렉션뷰의 셀을 원하는 형태로 정렬할 수 있습니다. 
 
@@ -62,7 +62,7 @@ Tip: 셀마다 다른 크기를 지정하게 되면 행에 있는 셀의 수는 
 
 ## 셀 및 행의 사이 간격 지정하기
 
-플로우 레이아웃을 사용하여 같은 행의 셀 사이의 최소 간격과 연속하느 ㄴ행 사이의 최소 간격을 지정할 수 있습니다. 여기서 명심해야 하는 점은 설정하는 간격은 최소간격이라는 점입니다. 행끼리의 간격은 플로우 레이아웃 객체에서 셀끼리의 간격에서와 같은 방법을 사용합니다. 모든 셀의 크기가 같다면 플로우 레이아웃은 행 간격의 최솟값을 절대적으로 수용하며 하나의 행에 있는 모든 셀이 다음 행의 셀과 균등한 간격을 유지할 수 있습니다.
+플로우 레이아웃을 사용하여 같은 행의 셀 사이의 최소 간격과 연속하는 행 사이의 최소 간격을 지정할 수 있습니다. 여기서 명심해야 하는 점은 설정하는 간격은 최소간격이라는 점입니다. 행끼리의 간격은 플로우 레이아웃 객체에서 셀끼리의 간격에서와 같은 방법을 사용합니다. 모든 셀의 크기가 같다면 플로우 레이아웃은 행 간격의 최솟값을 절대적으로 수용하며 하나의 행에 있는 모든 셀이 다음 행의 셀과 균등한 간격을 유지할 수 있습니다.
 
 - 셀의 크기가 동일한 경우 셀의 간격
 
@@ -95,10 +95,10 @@ iOS8부터는 새로운 방법이 하나 추가되었습니다.
 셀에 오토레이아웃을 적용하고 (앞의 두가지  방법에도 셀에 오토레이아웃을 적용할 수는 있습니다.) 셀 스스로 크기를 결정한 후 이를 UICollectionViewLayout 객체에 알려줍니다. 이 방법을 사용하려면 estimatedItemSize 프로퍼티를 사용해 대략적인 셀의 최소 크기를 미리 알려줍니다
 
 ```swift
-let flowLayout: UICollectionViewFLowLayout = UICollectionVIewFlowLayout()
+let flowLayout: UICollectionViewFLowLayout = UICollectionViewFlowLayout()
 flowLayout.estimatedItemSize = CGSize(width: 50.0, height: 50.0)
 
-collectionView.collecionViewLayout = flowLatout
+collectionView.collecionViewLayout = flowLayout
 ```
 
 ## UICollectionViewDelegateFlowLayout
