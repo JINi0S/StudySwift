@@ -15,7 +15,7 @@ day 03 - 22/02/27
 
 ## 컬렉션뷰 데이터소스와 델리게이트
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1038b6a-8d2d-43c6-a8d7-824cff7aeaa2/Untitled.png)
+![Untitled](https://cphinf.pstatic.net/mooc/20180205_196/1517819278683gVsDQ_PNG/137_0.png)
 
 ## 데이터 소스
 
