@@ -27,6 +27,7 @@ day03 - 22/02/27
 (스토리보드를 사용하여 셀을 구성하면 컬렉션뷰에 따로 셀클래스를 등록할 필요는 없습니다.)
 
 
+
 ## UICollectionViewCell 클래스
 
 ### 컬렉션뷰 셀의 구성요소 관련 프로퍼티
@@ -45,6 +46,7 @@ day03 - 22/02/27
 - func dragStateDidChange(_ :) : 셀의 드래그 상태가 변경되면 호출됩니다.
 
 드래그 상태는 UICollectionViewCellDragState의 열거형으로 표현되고 none, lifting, dragging의 3가지 상태를 갖습니다.
+
 
 
 ## 컬렉션뷰 셀 vs 테이블뷰 셀
