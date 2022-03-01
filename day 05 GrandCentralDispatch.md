@@ -23,7 +23,8 @@ Grand Central Dispatch 란
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d8058a6-e8be-4995-b46c-dc1aada1e91b/Untitled.png)
 
-[https://cphinf.pstatic.net/mooc/20180130_124/1517302218216hO5JE_PNG/159_0.png](https://cphinf.pstatic.net/mooc/20180130_124/1517302218216hO5JE_PNG/159_0.png)
+![Untitled](https://cphinf.pstatic.net/mooc/20180130_124/1517302218216hO5JE_PNG/159_0.png)
+
 
 ### 디스패치 소스( Dispatch Source)
 
