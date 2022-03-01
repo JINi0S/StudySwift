@@ -22,8 +22,7 @@ Grand Central Dispatch 란
 디스패치 대기열(Dispatch Queu)은 작업을 연속적 혹은 동시에 진행하기는 하지만, 언제나 먼저 나가는 순서로 실행됩니다. Serial Dispatch Queue는 한 번에 하나의 작업만을 실행하며, 해당 작업이 대기열에서 제외되고 새로운 작업이 시작되기 전까지 기다립니다. 이와는 반대로 Concurrent Dispatch Queue는 이미 시작된 작업이 완료될 때까지 기다리지 않고 가능한 많은 작업을 진행합니다. 디스패치 대기열(Dispatch Queue)은 GCD 기술 일부입니다.
 
 
-[untitled] (https://cphinf.pstatic.net/mooc/20180130_124/1517302218216hO5JE_PNG/159_0.png)
-
+![Dispatch Queue의 종류](https://cphinf.pstatic.net/mooc/20180130_124/1517302218216hO5JE_PNG/159_0.png)
 
 
 ### 디스패치 소스( Dispatch Source)
