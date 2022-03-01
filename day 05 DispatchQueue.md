@@ -29,7 +29,7 @@ DispatchQueue의 장점은 일반 스레드 코드보다 쉽고 효율적으로 
 
 실행 중인 작업이 끝나기를 기다리지 않고 대기열(Queue)에 있는 작업을 동시에 별도의 스레드를 사용하여 실행합니다. 즉, 병렬처리방식입니다.
 
-![Untitled][https://cphinf.pstatic.net/mooc/20180124_11/15167944355278eIUk_PNG/159_0.png](https://cphinf.pstatic.net/mooc/20180124_11/15167944355278eIUk_PNG/159_0.png)
+![Untitled](https://cphinf.pstatic.net/mooc/20180124_11/15167944355278eIUk_PNG/159_0.png)
 
 ### 주요 프로퍼티
 
