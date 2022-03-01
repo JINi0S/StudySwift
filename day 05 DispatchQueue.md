@@ -72,3 +72,7 @@ func asyncAfter(deadline: DispatchTime, excute: DispatchWorkItem)
 ```
 
 - global(qos:): 시스템의 글로벌 대기열(Queue)을 반환
+
+```swift
+class func global(qos: DispatchQoS.QoSClass = dafault) -> DispatchQueue
+```
