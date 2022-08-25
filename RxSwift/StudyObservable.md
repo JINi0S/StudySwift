@@ -14,20 +14,153 @@
 - Observable**은 error** 이벤트를 방출하여 완전 종료될 수 있다
 - Observable은 complete이벤트를 방출하여 완전 종료될 수 있다
 
-### Single
+import RxSwift
+import Foundation
 
-.success (next와 complete를 합친 느낌)이벤트 또는 .error 이벤트을 한번만 방출하는 옵져버블
+print("----Just----")
+Observable<Int>.just(1)
+    .subscribe(onNext: {
+        print($0)
+    })
 
-### Maybe
+print("----Of1----")
+Observable<Int>.of(1, 2, 3, 4, 5)
 
-싱글과 비슷함. 성공적으로 complete되더라도 아무런 값을 방출하지 않는 complete를 포함
+print("----Of2----")
+Observable.of([1, 2, 3, 4, 5])
 
-.success또는 .complete 또는 .error 를 방출
+print("----From----")
+Observable.from([1, 2, 3, 4, 5])
 
-### Completable
+print("----subscribe1----")
+Observable.of(1, 2, 3)
+    .subscribe {
+        print($0)
+    }
 
-.completed 또는 .error만 방출
+print("----subscribe2----")
+Observable.of(1, 2, 3)
+    .subscribe {
+        if let element = $0.element {
+            print(element)
+        }
+    }
 
-어떠한 값도 방출하지 않는다.
+print("----subscribe3----")
+Observable.of(1, 2, 3)
+    .subscribe(onNext: {
+        print($0)
+    })
 
-예) 데이터가 자동으로 저당되는 기능을 사용할 때 값이 따로 필요없음
+print("----empty----")
+Observable.empty()
+    .subscribe {
+        print($0)
+    }
+
+print("----emptyVoid----complete된 걸 알 수 있음")
+Observable<Void>.empty()
+    .subscribe {
+        print($0)
+    }
+
+
+print("----never----")
+Observable<Void>.never()
+    .debug("never")
+    .subscribe (
+        onNext: {
+            print($0)
+        },
+        onCompleted: {
+            print("Completed")
+        }
+    )
+
+print("----range----")
+Observable.range(start: 1, count: 9)
+    .subscribe(onNext: {
+        print("2*\($0)=\(2*$0)")
+    })
+
+print("----dispose----")
+Observable.of(1, 2, 3)
+    .subscribe{
+        print($0)
+    }
+    .dispose()
+
+print("----disposeBag----")
+let disposeBag = DisposeBag()
+Observable.of(1, 2, 3)
+    .subscribe{
+        print($0)
+    }
+    .disposed(by: disposeBag)
+
+
+print("----create1----")
+Observable.create { observer -> Disposable in
+    observer.onNext(1)
+    //observer.on(.next(1))
+    observer.onCompleted()
+    //observer.on(.completed)
+    observer.onNext(2)
+    return Disposables.create()
+}
+.subscribe{
+    print($0)
+}
+.disposed(by: disposeBag)
+
+
+print("----create2----")
+enum MyError: Error {
+    case anError
+}
+Observable.create { observer -> Disposable in
+    observer.onNext(1)
+    observer.onError(MyError.anError)
+    observer.onCompleted()
+    observer.onNext(2)
+    return Disposables.create()
+}
+.subscribe(onNext: {
+    print($0)
+}, onError: {
+    print($0.localizedDescription)
+}, onCompleted: {
+    print("completed")
+}, onDisposed: {
+    print("disposed")
+})
+
+
+print("----deferred1----")
+Observable.deferred {
+    Observable.of(1,2,3)
+}
+.subscribe {
+    print($0)
+}
+.disposed(by: disposeBag)
+
+print("----deffered2----")
+var 뒤집기: Bool = false
+
+let fatory: Observable<String> = Observable.deferred {
+    뒤집기 = !뒤집기
+    
+    if 뒤집기 {
+        return Observable.of("🫲🏻")
+    } else {
+        return Observable.of("🫱🏻")
+    }
+}
+
+for _ in 0...3 {
+    fatory.subscribe(onNext: {
+        print($0)
+    })
+    .disposed(by: disposeBag)
+}
