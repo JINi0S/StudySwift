@@ -14,6 +14,7 @@
 - Observable**은 error** 이벤트를 방출하여 완전 종료될 수 있다
 - Observable은 complete이벤트를 방출하여 완전 종료될 수 있다
 
+```swift
 import RxSwift
 import Foundation
 
@@ -164,3 +165,5 @@ for _ in 0...3 {
     })
     .disposed(by: disposeBag)
 }
+
+```
