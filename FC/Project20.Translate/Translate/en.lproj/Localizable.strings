@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Translate
+
+  Created by 이진희 on 2022/10/03.
+  
+*/
+"Bookmark" = "Bookmark";
+"Translate" = "Translate";
+
+"Korean" = "Korean";
+"English" = "English";
+"Japanese" = "Japanese";
+"Chinese" = "Chinese";
+
+
+"Cancel" = "Cancel";
+
+"Enter_text" = "Enter text";
