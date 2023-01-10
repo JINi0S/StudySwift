@@ -1,0 +1,34 @@
+# ****ConnectablePublisher****
+
+**Protocol.** A publisher that provides an explicit means of connecting and canceling publication.
+게시를 연결하고 취소하는 명시적인 방법을 제공하는 publisher입니다.
+
+## 선언
+
+```swift
+protocol ConnectablePublisher<Output, Failure> : [Publisher](https://developer.apple.com/documentation/combine/publisher)
+```
+
+## 개요
+
+요소를 생성하기 전에 추가 구성 또는 설정을 수행해야 할 경우 ConnectablePublisher를 사용합니다.
+이 publisher은 connect() 메소드를 호출할 때까지 아무런 elements도 생산하지 않습니다.
+makeConnectable()를 사용하여 failure type이 Never인 publisher에서 ConnectablePublisher를 만듭니다.
+
+- ****Performing Explicit Connections****
+
+`[func connect() -> Cancellable](https://developer.apple.com/documentation/combine/connectablepublisher/connect())`
+
+Connects to the publisher, allowing it to produce elements, and returns an instance with which to cancel publishing.
+
+**Required.**
+
+**Return Value:** A `[Cancellable](https://developer.apple.com/documentation/combine/cancellable)` instance that you use to cancel publishing.
+
+- ****Connecting Automatically****
+
+`[func autoconnect() -> Publishers.Autoconnect<Self>](https://developer.apple.com/documentation/combine/connectablepublisher/autoconnect())`
+
+Automates the process of connecting or disconnecting from this connectable publisher.
+
+**Return Value:** A publisher which automatically connects to its upstream connectable publisher.
